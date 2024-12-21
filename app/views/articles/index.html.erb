@@ -1,0 +1,21 @@
+<div class="row justify-content-center">
+  <div class="col-6 mt-5">
+    <h1>Wikinimous</h1>
+    <%= link_to "Add a new Article", new_article_path(@article) %>
+    <ul class="p-0 list-unstyled">
+      <% @articles.each do |article| %>
+        <li class="list-group-item my-2">
+          <div>
+            <%# <p><%= article.title </p> %>
+            <%= link_to article.title, article_path(article) %>
+            <p><%= "#{article.content[0..20]}...." %></p>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+
+<%# Heromine Granger
+- You're a wizard, Harryy. You're a wizard, Harryy. You're a wizard, Harryy. You're a wizard, Harryy. You're a wizard, Harryy. You're a wizard, Harryy. You're a wizard, Harryy. You're a wizard, Harryy. You're a wizard, Harryy. You're a wizard, Harryy. You're a wizard, Harryy. %>
